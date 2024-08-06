@@ -1,0 +1,27 @@
+
+<mat-card>
+  <mat-card-content>
+  <div class="header">
+    <img src="stu.jpg" style= "height:220px; width:220px">
+  </div>
+    <form [formGroup]="loginForm" (submit)="onsubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>اسم المستخدم</mat-label>
+        <input matInput type="text" autocomplete="off" formControlName="username">
+        <mat-icon matSuffix>
+          <fa-icon [icon]="fauser"></fa-icon>
+        </mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>كلمة المرور</mat-label>
+        <input matInput type="password" autocomplete formControlName="password">
+        <mat-icon matSuffix>
+          <fa-icon [icon]="falock"></fa-icon>
+        </mat-icon>
+      </mat-form-field>
+      <br>
+      <button mat-flat-button color="primary" class="login-button">تسجيل الدخول</button>
+
+    </form>
+    </mat-card-content>
+    </mat-card>
